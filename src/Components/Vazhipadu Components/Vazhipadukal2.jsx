@@ -57,17 +57,17 @@ function Vazhipadukal2() {
   ];
 
   return (
-    <div className="p-10 space-y-20 lg:space-y-40">
-      <h2 className="text-[#FC931E] lg:text-xl font-bold text-center">
+    <div className="p-10 space-y-20 lg:space-y-30 xl:space-y-40">
+      <h2 className="text-[#FC931E] lg:text-lg xl:text-xl font-bold text-center">
         വഴിപാടുകൾ ഭക്തിയുടെ ബാഹ്യപ്രകടനമാണ്. ഇത് ആത്മീയ ശാന്തിയും
         ലക്ഷ്യസാധ്യതയും നൽകുന്നു.
       </h2>
       <div className="flex justify-center items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-10 gap-y-5 lg:gap-x-80 lg:gap-y-10 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 gap-y-5 lg:gap-x-20 xl:gap-x-10 lg:gap-y-10 w-full">
           {vazhipaduData.map((item, index) => (
             <button
               key={index}
-              className="p-3 lg:p-5 bg-[#FC931E] text-white rounded-4xl font-bold"
+              className="p-3 lg:p-5 bg-[#FC931E] text-white rounded-4xl font-bold "
             >
               {item}
             </button>

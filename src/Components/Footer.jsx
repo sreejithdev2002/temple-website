@@ -8,12 +8,12 @@ import { FaWhatsapp } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="bg-[#F8F9FA] flex flex-col lg:flex-row space-y-5 lg:space-y-0 justify-between p-10">
-      <div className="space-y-5">
-        <h3 className="text-[#FC931E] text-xl font-bold">
+    <div className="bg-[#F8F9FA] flex flex-col lg:flex-row space-y-5 lg:space-y-0 lg:space-x-5 space-x-0 justify-between p-10">
+      <div className="flex flex-col justify-between space-y-5">
+        <h3 className="text-[#FC931E] lg:text-lg xl:text-xl font-bold">
           ത്രേതായുഗ മൂർത്തി ക്ഷേത്രം
         </h3>
-        <p className="text-[#77808B] text-sm w-[400px] leading-5">
+        <p className="text-[#77808B] text-xs xl:text-sm md:w-full lg:w-[200px] xl:w-[400px] leading-5">
           ശ്രീരാമനും ശ്രീഹനുമാനുമാണ് പ്രധാന ദേവതകൾ. രാമായണ ജ്യോതിഷവും, പ്രത്യേക
           പൂജകളായ പൗർണമി ശക്തിപൂജയും ഈ ക്ഷേത്രത്തിന്റെ പ്രധാന സവിശേഷതകളാണ്.
           ആത്മീയ ശാന്തിയും ദൈവാനുഗ്രഹവും തേടുന്നവർക്ക് അനുഗ്രഹീതമായ ദർശനം.
@@ -23,7 +23,7 @@ function Footer() {
         </p>
       </div>
       <div className="space-y-5">
-        <h3 className="text-[#FC931E] text-xl font-bold">Get in Touch</h3>
+        <h3 className="text-[#FC931E] lg:text-lg xl:text-xl font-bold">Get in Touch</h3>
         <div className="flex items-start">
           <span>
             <IoLocationOutline color="#FC931E" size={20} />
@@ -39,22 +39,22 @@ function Footer() {
           <p className="text-[#77808B] text-sm ml-3">+91 9495063241</p>
         </div>
       </div>
-      <div className="flex h-full space-x-3">
-        <div className="p-3 bg-[#FC931E] rounded-full text-white">
+      <div className="flex h-full space-x-3 lg:space-x-1 ">
+        <div className="lg:p-2 xl:p-3 bg-[#FC931E] rounded-full text-white">
           <FaFacebook size={20} />
         </div>
-        <div className="p-3 bg-[#FC931E] rounded-full text-white">
+        <div className="lg:p-2 xl:p-3 bg-[#FC931E] rounded-full text-white">
           <FaInstagram size={20} />
         </div>
-        <div className="p-3 bg-[#FC931E] rounded-full text-white">
+        <div className="lg:p-2 xl:p-3 bg-[#FC931E] rounded-full text-white">
           <FaXTwitter size={20} />
         </div>
-        <div className="p-3 bg-[#FC931E] rounded-full text-white">
+        <div className="lg:p-2 xl:p-3 bg-[#FC931E] rounded-full text-white">
           <FaWhatsapp size={20} />
         </div>
       </div>
       <div className="space-y-5">
-        <h3 className="text-[#FC931E] text-xl font-bold">Join a Newsletter</h3>
+        <h3 className="text-[#FC931E] lg:text-lg xl:text-xl font-bold">Join a Newsletter</h3>
         <div className="flex flex-col">
           <label className="text-[#77808B] mb-2">Your Email</label>
           <input

@@ -15,7 +15,7 @@ function Home() {
       <Header />
       <Home1/>
       <Home2/>
-      <Home3/>
+      {/* <Home3/> */}
       <HomeCarousel/>
       <Home4/>
       <Home5/>
