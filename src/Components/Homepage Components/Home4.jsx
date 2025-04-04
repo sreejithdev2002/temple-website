@@ -86,16 +86,16 @@ function Home4() {
   return (
     <div className="px-5 py-10 flex flex-col justify-between">
       <div>
-        <h2 className="text-[#FC931E] text-4xl font-bold">പ്രധാന ദേവതകൾ</h2>
-        <div className="flex my-3 items-start">
-          <p className="text-3xl">
+        <h2 className="text-[#FC931E] text-2xl lg:text-4xl font-bold">പ്രധാന ദേവതകൾ</h2>
+        <div className="flex flex-col-reverse lg:flex-row my-3 items-start">
+          <p className="lg:text-3xl">
             <strong>ശ്രീ ഹനുമാൻ സ്വാമി</strong> ശ്രീരാമഭക്തനായ ഹനുമാൻ സിംഹശക്തിയും
             അനന്തഭക്തിയും ദയാമയനുമാണ്. വായുപുത്രനായി ജനിച്ച ഹനുമാൻ
             അതുല്യബലത്തിനുടമയാണ്. ഭക്തർക്ക് പ്രത്യക്ഷനായി പ്രശ്നങ്ങൾ പരിഹരിക്കുന്ന
             ദേവനായ ഹനുമാൻ, ബുദ്ധി, ബലം, ധൈര്യം, വിജയം, ദാനം എന്നിവ നൽകുന്നു.{" "}
             <strong>ഹനുമാൻ ചാലിസ പാരായണം അനുഗ്രഹം നേടാൻ സഹായിക്കും.</strong>
           </p>
-          <img src={deityImages[currentImageIndex]} alt="Deity" className="w-auto h-[30vh] transition-opacity duration-1000 ease-in-out" />
+          <img src={deityImages[currentImageIndex]} alt="Deity" className="w-auto h-[30vh] transition-opacity duration-1000 mb-5 lg:mb-0 ease-in-out" />
         </div>
 
         {/* Grid data */}
@@ -103,7 +103,7 @@ function Home4() {
           {gridData.map((item, index) => (
             <div
               key={index}
-              className="bg-[#FF8600] p-3 rounded-xl h-[8vh] text-white font-bold flex items-center justify-center text-center"
+              className="bg-[#FF8600] text-sm lg:text-base p-2 lg:p-3 rounded-xl h-[6vh] lg:h-[8vh] text-white font-bold flex items-center justify-center text-center"
             >
               <p>{item}</p>
             </div>

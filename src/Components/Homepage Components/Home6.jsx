@@ -4,10 +4,10 @@ import bookImage from "../../assets/Homepage/book.png"
 function Home6() {
   return (
     <div className="p-5 lg:p-10">
-      <h2 className="font-bold text-xl lg:text-4xl text-[#FC931E] mb-3">
+      <h2 className="font-bold text-2xl lg:text-4xl text-[#FC931E] mb-3">
         രാമായണ ജ്യോതിഷം
       </h2>
-      <h3 className="text-2xl lg:text-2xl font-bold mb-10">
+      <h3 className="text-xl lg:text-2xl font-bold mb-10">
         ദൈവിക ജ്യോതിഷശാസ്ത്രത്തിന്റെ പ്രകാശം
       </h3>
       <div className="flex justify-between">
@@ -17,7 +17,7 @@ function Home6() {
             ജീവിത ഭാഗം അന്വേഷിക്കുകയാണ് ഈ ജീവിത ദർശനത്തിൽ നിമിത്തങ്ങളും സൂചനകളും
             ഉത്തരങ്ങളും ആയി ദർശനം നൽകുന്നത് മഹാരാമായണം തന്നെ
           </p>
-          <button className="bg-[#FF8600] p-3 lg:p-5 text-xs lg:text-base rounded-4xl mt-20 font-bold">
+          <button className="bg-[#FF8600] p-3 lg:p-5 text-xs lg:text-base rounded-4xl mt-10 lg:mt-20 font-bold">
             കൂടുതൽ അറിയുക
           </button>
         </div>

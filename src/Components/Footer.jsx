@@ -8,7 +8,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="bg-[#F8F9FA] flex justify-between p-10">
+    <div className="bg-[#F8F9FA] flex flex-col lg:flex-row space-y-5 lg:space-y-0 justify-between p-10">
       <div className="space-y-5">
         <h3 className="text-[#FC931E] text-xl font-bold">
           ത്രേതായുഗ മൂർത്തി ക്ഷേത്രം

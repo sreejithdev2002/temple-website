@@ -1,7 +1,7 @@
 function Vazhipadukal1() {
   return (
     <div className="flex justify-center p-10">
-      <div className="grid grid-cols-2 gap-15 mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mx-auto">
         <div className=" border-2 border-[#FC931E] rounded-lg p-3">
           <p className="text-center text-xl font-bold">
             <span className="text-[#FC931E]">ഭക്തിയും ആരാധനയുടെ പ്രകടനം</span>{" "}
@@ -34,7 +34,7 @@ function Vazhipadukal1() {
           </p>
         </div>
         {/* Centering the last single item */}
-        <div className="w-[50%] border-2 border-[#FC931E] rounded-lg p-3 col-span-2 mx-auto">
+        <div className="lg:w-[50%] border-2 border-[#FC931E] rounded-lg p-3 lg:col-span-2 mx-auto">
           <p className="text-center text-xl font-bold">
             <span className="text-[#FC931E]">ആരോഗ്യവും ഐശ്വര്യവും</span> <br />{" "}
             രാമന്റെ ആരാധനയ്ക്ക് ജീവിതത്തിൽ സമാധാനം, ആരോഗ്യം, ധനസമ്പത്ത് എന്നിവ

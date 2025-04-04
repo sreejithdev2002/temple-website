@@ -1,10 +1,10 @@
 function Abhishekangal1() {
   return (
     <div className="flex flex-col justify-center p-10 space-y-10">
-      <h2 className="text-[#FC931E] text-3xl font-bold">
+      <h2 className="text-[#FC931E] text-2xl lg:text-3xl font-bold">
         അഭിഷേകത്തിന്റെ പ്രയോജനങ്ങൾ
       </h2>
-      <div className="grid grid-cols-2 gap-15 mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-15 mx-auto">
         <div className=" border-2 border-[#FC931E] rounded-lg p-3">
           <p className="text-center text-xl font-bold">
             <span className="text-[#FC931E]">ദൈവീക പ്രീതി</span> <br /> ഭഗവാന്റെ
@@ -36,7 +36,7 @@ function Abhishekangal1() {
           </p>
         </div>
         {/* Centering the last single item */}
-        <div className="w-[50%] border-2 border-[#FC931E] rounded-lg p-3 col-span-2 mx-auto">
+        <div className="lg:w-[50%] border-2 border-[#FC931E] rounded-lg p-3 lg:col-span-2 mx-auto">
           <p className="text-center text-xl font-bold">
             <span className="text-[#FC931E]">മന്ത്രശക്തി</span> <br />{" "}
             വേദമന്ത്രങ്ങൾ ഉച്ചരിച്ച് അഭിഷേകം ചെയ്യുമ്പോൾ, അത് അന്തരീക്ഷത്തെ
