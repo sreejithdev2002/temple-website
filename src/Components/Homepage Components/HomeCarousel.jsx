@@ -7,7 +7,7 @@
 // function HomeCarousel() {
 //     return (
 //         <div>
-//             <img src={image1} alt="" className="w-full h-auto" />
+//             <img loading="lazy"  src={image1} alt="" className="w-full h-auto" />
 //         </div>
 //     );
 // }
@@ -40,7 +40,7 @@ function HomeCarousel() {
 
     return (
         <div className="relative w-full h-auto overflow-hidden">
-            <img src={images[currentIndex]} alt="banner" className="w-full h-auto transition-opacity duration-1000 ease-in-out" />
+            <img loading="lazy"  src={images[currentIndex]} alt="banner" className="w-full h-auto transition-opacity duration-1000 ease-in-out" />
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                 {images.map((_, index) => (
                     <button 

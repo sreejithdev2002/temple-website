@@ -21,7 +21,7 @@ function Home6() {
             കൂടുതൽ അറിയുക
           </button>
         </div>
-        {/* <img src={shiva} alt="Vector Image of Lord Shiva" width={300} /> */}
+        {/* <img loading="lazy"  src={shiva} alt="Vector Image of Lord Shiva" width={300} /> */}
         <div className="w-full max-w-xs sm:max-w-sm lg:max-w-md">
           <img
             src={bookImage}

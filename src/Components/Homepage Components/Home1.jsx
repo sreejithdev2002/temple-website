@@ -19,7 +19,7 @@ function Home1() {
 
       {/* Right Side Image */}
       {/* <div className="relative flex justify-center w-full max-w-xs sm:max-w-sm lg:max-w-3xl">
-        <img src={DeviImage} alt="Image of goddess Devi" className="lg:h-[70vh]" />
+        <img loading="lazy"  src={DeviImage} alt="Image of goddess Devi" className="lg:h-[70vh]" />
       </div> */}
       <div className="relative w-full flex justify-center items-center mb-5 lg:mb-0">
         <img

@@ -40,16 +40,16 @@ function Footer() {
         </div>
       </div>
       <div className="flex h-full space-x-3 lg:space-x-1 ">
-        <div className="lg:p-2 xl:p-3 bg-[#FC931E] rounded-full text-white">
+        <div className="p-2 xl:p-3 bg-[#FC931E] rounded-full text-white">
           <FaFacebook size={20} />
         </div>
-        <div className="lg:p-2 xl:p-3 bg-[#FC931E] rounded-full text-white">
+        <div className="p-2 xl:p-3 bg-[#FC931E] rounded-full text-white">
           <FaInstagram size={20} />
         </div>
-        <div className="lg:p-2 xl:p-3 bg-[#FC931E] rounded-full text-white">
+        <div className="p-2 xl:p-3 bg-[#FC931E] rounded-full text-white">
           <FaXTwitter size={20} />
         </div>
-        <div className="lg:p-2 xl:p-3 bg-[#FC931E] rounded-full text-white">
+        <div className="p-2 xl:p-3 bg-[#FC931E] rounded-full text-white">
           <FaWhatsapp size={20} />
         </div>
       </div>

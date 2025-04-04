@@ -1,14 +1,20 @@
 import headerLogo from "../assets/headerLogo.png";
 import { Link } from "react-router-dom";
+import { IoIosNotificationsOutline } from "react-icons/io";
 
 function Header() {
   return (
     <div className="flex flex-col lg:flex-row items-center lg:justify-between bg-[rgba(252,148,30,0.5)] p-2">
       <div>
-        <img src={headerLogo} className="h-auto w-[80px] lg:w-[100px]" alt="" />
+        <img
+          loading="lazy"
+          src={headerLogo}
+          className="h-auto w-[80px] lg:w-[100px]"
+          alt=""
+        />
       </div>
       <div className="pr-0 lg:pr-10">
-        <h1 className="text-xs md:text-lg lg:text-xl xl:text-2xl font-bold pr-0 lg:pr-20">
+        <h1 className="sm:text-xs text-sm md:text-lg lg:text-xl xl:text-2xl font-bold pr-0 lg:pr-20">
           PAZHUVIL THRETHAYUGA MOORTHI TEMPLE CHARTABLE TRUST.
         </h1>
         <div>
@@ -21,7 +27,9 @@ function Header() {
             <li>3D KSHETHRA</li>
             <li>GALLERY</li>
             <li>CONTACT</li>
-            <li>NOTIFY</li>
+            <li>
+              <IoIosNotificationsOutline size={20} />
+            </li>
           </ul>
         </div>
       </div>

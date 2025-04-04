@@ -54,7 +54,7 @@ function Home4() {
             alt="Deity"
             className="w-auto h-[30vh] transition-opacity duration-1000 mb-5 lg:mb-0 ease-in-out"
           />
-          {/* <img src={deityImages[currentImageIndex]} alt="Deity" className="w-auto h-[30vh] transition-opacity duration-1000 mb-5 lg:mb-0 ease-in-out" /> */}
+          {/* <img loading="lazy"  src={deityImages[currentImageIndex]} alt="Deity" className="w-auto h-[30vh] transition-opacity duration-1000 mb-5 lg:mb-0 ease-in-out" /> */}
         </div>
 
         {/* Grid data */}
