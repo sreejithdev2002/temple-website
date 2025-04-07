@@ -5,3 +5,9 @@
 #PoppinsFont {
   font-family: "Poppins", sans-serif;
 }
+
+.shape-image {
+  shape-outside: ellipse(50% 50%);
+  float: left;
+  clip-path: ellipse(50% 50%);
+}

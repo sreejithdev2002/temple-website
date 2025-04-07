@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 function Vazhipadukal2() {
+  const navigate = useNavigate();
+
   const vazhipaduData = [
     "സഹസ്ര നാമ അർച്ചന",
     "അഷ്ടോത്തര നാമ അർച്ചന",
@@ -68,6 +72,7 @@ function Vazhipadukal2() {
             <button
               key={index}
               className="p-3 lg:p-5 bg-[#FC931E] text-white rounded-4xl font-bold "
+              onClick={() => navigate(`/vazhipadu/${item}`)}
             >
               {item}
             </button>
