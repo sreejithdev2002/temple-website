@@ -53,7 +53,7 @@ function Header() {
     { name: "HOME", path: "/" },
     { name: "DONATIONS", path: "/donations" },
     { name: "HISTORY", path: "/history" },
-    { name: "RAMAYANA ASTROLOGY", path: "/astrology" },
+    { name: "RAMAYANA ASTROLOGY", path: "/ramayana-astrology" },
     { name: "3D KSHETHRA", path: "/3d" },
     { name: "GALLERY", path: "/gallery" },
     { name: "CONTACT", path: "/contact" },
