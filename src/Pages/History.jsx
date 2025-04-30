@@ -174,6 +174,9 @@ function History() {
         combinedData.push(...ramayanamBookings);
       }
 
+      combinedData.sort((a, b) => new Date(b.bookingDate) - new Date(a.bookingDate));
+
+
       setHistoryData(combinedData);
       console.log(combinedData);
     } catch (error) {
