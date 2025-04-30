@@ -3,11 +3,17 @@ import BookImage from "../../assets/book.png";
 function Astrology() {
   return (
     <div className="flex flex-col items-center">
-      <img src={BookImage} alt="" className="w-auto h-48 self-center lg:self-end" />
+      <img
+        src={BookImage}
+        alt=""
+        className="w-auto h-48 self-center lg:self-end"
+      />
       <div className="p-10 space-y-10">
         <p className="font-bold leading-7 lg:leading-10 text-xs sm:text-base lg:text-xl">
-          <span className="text-[#FC931E] text-sm sm:text-lg lg:text-2xl">രാമായണ ജ്യോതിഷം</span> ജീവിതത്തിനുള്ള
-          മാർഗ്ഗദർശനം നൽകുന്ന ഇതിഹാസ ചിന്തകളാണ്.
+          <span className="text-[#FC931E] text-sm sm:text-lg lg:text-2xl">
+            രാമായണ ജ്യോതിഷം
+          </span>{" "}
+          ജീവിതത്തിനുള്ള മാർഗ്ഗദർശനം നൽകുന്ന ഇതിഹാസ ചിന്തകളാണ്.
         </p>
         <p className="font-bold leading-7 lg:leading-10 text-xs sm:text-base lg:text-xl">
           ഭഗവാൻ ശ്രീരാമന്റെ ജീവിത ദർശനം അനുസരിച്ച്, മാനസിക സമാധാനവും സാമ്പത്തിക

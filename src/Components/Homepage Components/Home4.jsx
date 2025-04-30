@@ -1,87 +1,81 @@
-// import { useState, useEffect } from "react";
-// import durgaImage from "../../assets/Homepage/durga.png";
-// import bhadrakaliImage from "../../assets/Homepage/bhadrakali.png";
-// import godessImage from "../../assets/Homepage/godess.png";
-import ganeshImage from "../../assets/Homepage/ganesh.png";
-// import snakeImage from "../../assets/Homepage/snake.png";
-// import hanumanImage from "../../assets/ganesh.png";
-
-// const deityImages = [hanumanImage, durgaImage, bhadrakaliImage, godessImage, ganeshImage, snakeImage];
+import { useEffect, useState } from "react";
+import axiosInstance from "../../axios/axiosInstance";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useNavigate } from "react-router-dom";
 
 function Home4() {
-  // const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [specialGodsData, setSpecialGodsData] = useState([]);
+  const imageApiURL = import.meta.env.VITE_API_IMAGE_URL;
+  const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % deityImages.length);
-  //   }, 3000);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axiosInstance.post("/vazhipad/showvazhipad", {
+          vazhipad_category: "special_god",
+        });
 
-  //   return () => clearInterval(interval);
-  // }, []);
+        if (response.status === 200) {
+          setSpecialGodsData(response.data.data);
+        }
+      } catch (error) {
+        console.error("Error fetching Special Gods Data:", error);
+      }
+    };
 
-  // const goToSlide = (index) => {
-  //   setCurrentImageIndex(index);
-  // };
-
-  const gridData = [
-    "സുന്ദരകാണ്ഡ പാരായണം",
-    "കുങ്കുമാർച്ചനം",
-    "എണ്ണ നിവേദ്യം",
-    "അവിൽ നിവേദ്യം",
-    "കദളിപ്പഴം നിവേദ്യം",
-    "വട മാല",
-    "നാരങ്ങ മാല",
-    "വെറ്റില മാല",
-  ];
-
+    fetchData();
+  }, []);
   return (
-    <div className="px-5 py-10 flex flex-col justify-between">
-      <div>
-        <h2 className="text-[#FC931E] text-2xl lg:text-3xl xl:text-4xl font-bold">
-          പ്രധാന ദേവതകൾ
-        </h2>
-        <div className="flex flex-col-reverse lg:flex-row my-3 items-start">
-          <p className="lg:text-xl xl:text-2xl">
-            <strong>ശ്രീ ഹനുമാൻ സ്വാമി</strong> ശ്രീരാമഭക്തനായ ഹനുമാൻ
-            സിംഹശക്തിയും അനന്തഭക്തിയും ദയാമയനുമാണ്. വായുപുത്രനായി ജനിച്ച ഹനുമാൻ
-            അതുല്യബലത്തിനുടമയാണ്. ഭക്തർക്ക് പ്രത്യക്ഷനായി പ്രശ്നങ്ങൾ
-            പരിഹരിക്കുന്ന ദേവനായ ഹനുമാൻ, ബുദ്ധി, ബലം, ധൈര്യം, വിജയം, ദാനം എന്നിവ
-            നൽകുന്നു.{" "}
-            <strong>ഹനുമാൻ ചാലിസ പാരായണം അനുഗ്രഹം നേടാൻ സഹായിക്കും.</strong>
-          </p>
-          <img
-            src={ganeshImage}
-            alt="Deity"
-            className="w-auto h-[30vh] transition-opacity duration-1000 mb-5 lg:mb-0 ease-in-out"
-          />
-          {/* <img loading="lazy"  src={deityImages[currentImageIndex]} alt="Deity" className="w-auto h-[30vh] transition-opacity duration-1000 mb-5 lg:mb-0 ease-in-out" /> */}
-        </div>
+    <div className="px-5 py-10 flex flex-col overflow-hidden">
+      <h2 className="text-[#FC931E] text-2xl lg:text-3xl xl:text-4xl font-bold mb-8">
+        പ്രധാന ദേവതകൾ
+      </h2>
 
-        {/* Grid data */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 mt-5">
-          {gridData.map((item, index) => (
+      {specialGodsData.length > 0 && (
+        <Carousel
+          autoPlay
+          infiniteLoop
+          interval={3000}
+          showThumbs={false}
+          showStatus={false}
+          showIndicators={true}
+          swipeable
+          emulateTouch
+          stopOnHover
+          transitionTime={1000}
+          axis="horizontal"
+        >
+          {specialGodsData.map((data, index) => (
             <div
-              key={index}
-              className="bg-[#FF8600] text-sm lg:text-sm xl:text-base p-2 lg:p-3 rounded-xl h-[6vh] lg:h-[8vh] text-white font-bold flex items-center justify-center text-center"
+              key={data._id || index}
+              className="min-w-full flex flex-col px-4"
             >
-              <p>{item}</p>
+              <div className="flex flex-col-reverse lg:flex-row justify-between items-start gap-4">
+                <p className="lg:text-xl xl:text-2xl w-[70vw] text-start">
+                  {data.vazhipad_details}
+                </p>
+                <div className=" h-[30vh] flex items-center justify-center">
+                  <img
+                    src={`${imageApiURL}${data.vazhipad_image}`}
+                    alt="Deity"
+                    className="h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 mt-5">
+                <button
+                  className="bg-[#FF8600] text-sm xl:text-base p-3 rounded-xl h-[8vh] text-white font-bold flex items-center justify-center text-center cursor-pointer z-10"
+                  onClick={() => navigate(`/vazhipadu/${data.vazhipad_id}`)}
+                >
+                  {data.vazhipad_name}
+                </button>
+              </div>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Dots at the bottom of the page
-      <div className="flex justify-center mt-10">
-        {deityImages.map((_, index) => (
-          <button
-            key={index}
-            className={`w-3 h-3 mx-1 rounded-full ${
-              currentImageIndex === index ? "bg-[#FF8600]" : "bg-gray-400"
-            } transition-all cursor-pointer`}
-            onClick={() => goToSlide(index)}
-          />
-        ))}
-      </div> */}
+        </Carousel>
+      )}
     </div>
   );
 }

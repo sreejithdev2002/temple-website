@@ -33,7 +33,6 @@ function Vazhipadukal1() {
             കടന്നുവരുന്ന ഒരു ആചാരമാണ്.
           </p>
         </div>
-        {/* Centering the last single item */}
         <div className="lg:w-[50%] border-2 border-[#FC931E] rounded-lg p-3 lg:col-span-2 mx-auto">
           <p className="text-center lg:text-lg xl:text-xl font-bold">
             <span className="text-[#FC931E]">ആരോഗ്യവും ഐശ്വര്യവും</span> <br />{" "}

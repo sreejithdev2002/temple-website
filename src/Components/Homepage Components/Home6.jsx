@@ -1,5 +1,4 @@
-// import shiva from "../../assets/shivaVector.png";
-import bookImage from "../../assets/Homepage/book.png"
+import bookImage from "../../assets/Homepage/book.png";
 
 function Home6() {
   return (
@@ -13,15 +12,15 @@ function Home6() {
       <div className="flex justify-between">
         <div>
           <p className="w-[200px] md:w-[70vw] lg:w-[70vw] text-xs lg:text-xl font-bold">
-            <span className="text-[#FC931E]">ശ്രീ ത്രേതായ മൂർത്തിയുടെ</span> ഭഗവത് സാന്നിധ്യത്തിൽ രാമായണത്തിൽ താങ്കളുടെ
-            ജീവിത ഭാഗം അന്വേഷിക്കുകയാണ് ഈ ജീവിത ദർശനത്തിൽ നിമിത്തങ്ങളും സൂചനകളും
+            <span className="text-[#FC931E]">ശ്രീ പഴുവില്‍ ത്രേതായുഗ മൂർത്തിയുടെ</span>{" "}
+            ഭഗവത് സാന്നിധ്യത്തിൽ രാമായണത്തിൽ താങ്കളുടെ ജീവിത ഭാഗം
+            അന്വേഷിക്കുകയാണ് ഈ ജീവിത ദർശനത്തിൽ നിമിത്തങ്ങളും സൂചനകളും
             ഉത്തരങ്ങളും ആയി ദർശനം നൽകുന്നത് മഹാരാമായണം തന്നെ
           </p>
           <button className="bg-[#FF8600] p-3 lg:p-5 text-xs lg:text-base rounded-4xl mt-10 lg:mt-20 font-bold">
             കൂടുതൽ അറിയുക
           </button>
         </div>
-        {/* <img loading="lazy"  src={shiva} alt="Vector Image of Lord Shiva" width={300} /> */}
         <div className="w-full max-w-xs sm:max-w-sm lg:max-w-md">
           <img
             src={bookImage}

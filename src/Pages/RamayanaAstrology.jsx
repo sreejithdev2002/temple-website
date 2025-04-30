@@ -15,11 +15,13 @@ function RamayanaAstrology() {
           Get your astrology checked by a jyothsan
         </p>
       </div>
-      <Astrology/>
+      <Astrology />
       <div className="bg-[#FC931E] p-5 my-3 sm:my-5 md:my-8 lg:my-20">
-        <h3 className="text-white font-bold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl  text-center">നിങ്ങളുടെ വിശദാംശങ്ങൾ താഴെ പൂരിപ്പിക്കുക</h3>
+        <h3 className="text-white font-bold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl  text-center">
+          നിങ്ങളുടെ വിശദാംശങ്ങൾ താഴെ പൂരിപ്പിക്കുക
+        </h3>
       </div>
-      <AstrologyForm/>
+      <AstrologyForm />
       <Footer />
     </div>
   );

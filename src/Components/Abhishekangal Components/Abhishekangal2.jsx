@@ -1,16 +1,38 @@
+import { useEffect, useState } from "react";
+import axiosInstance from "../../axios/axiosInstance";
+
 function Abhishekangal2() {
-  const abhishekangalData = [
-    "തേൻ",
-    "നെയ്യ്",
-    "കരിക്ക്",
-    "കളഭം",
-    "കുങ്കുമം",
-    "ഭസ്മം",
-    "പാല്",
-    "പഞ്ചാമൃതം",
-    "പഞ്ചഗവ്യം",
-    "നവഗാഭിഷേകം",
-  ];
+  const [abhishekangal, setAbhishekangal] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchData = async () => {
+    try {
+      let vazhipad_category = "general_abhishekam";
+
+      const response = await axiosInstance.post("/vazhipad/showvazhipad", {
+        vazhipad_category,
+      });
+
+      if (response.status === 200) {
+        setAbhishekangal(response.data.data);
+        console.log(response.data.data);
+        setLoading(false);
+      }
+    } catch (error) {
+      console.error("Error fetching Abhishekangal : ", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  if (loading)
+    return (
+      <div className="flex items-center justify-center h-[20vh] my-20">
+        <h1 className="text-5xl font-semibold">Loading...</h1>
+      </div>
+    );
 
   return (
     <div className="p-10 space-y-20 lg:space-y-30 xl:space-y-40">
@@ -21,65 +43,14 @@ function Abhishekangal2() {
       </h2>
       <div className="flex justify-center items-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 gap-y-5 lg:gap-x-20 xl:gap-x-10 lg:gap-y-10 w-full">
-          {abhishekangalData.map((item, index) => (
+          {abhishekangal.map((item, index) => (
             <button
               key={index}
-              className="p-3 lg:p-5 bg-[#FC931E] text-white rounded-4xl font-bold"
+              className="p-3 lg:p-5 bg-[#FC931E] text-white rounded-4xl font-bold cursor-pointer hover:bg-[#ff8800c9] transition duration-300"
             >
-              {item}
+              {item.vazhipad_name}
             </button>
           ))}
-
-          {/* <button className="p-5 bg-[#FC931E] text-white rounded-4xl text-lg font-bold">
-            ഉത്സവ ബലി
-          </button> */}
-
-          {/* <button className="p-5 bg-[#FC931E] text-white rounded-4xl text-lg font-bold">
-            ക്ഷേത്ര പ്രദക്ഷിണം
-          </button>
-          <button className="p-5 bg-[#FC931E] text-white rounded-4xl text-lg font-bold">
-            ഹോമ-യജ്ഞങ്ങൾ
-          </button>
-
-          <button className="p-5 bg-[#FC931E] text-white rounded-4xl text-lg font-bold">
-            ഉത്സവ ബലി
-          </button>
-          <button className="p-5 bg-[#FC931E] text-white rounded-4xl text-lg font-bold">
-            ക്ഷേത്ര പ്രദക്ഷിണം
-          </button>
-          <button className="p-5 bg-[#FC931E] text-white rounded-4xl text-lg font-bold">
-            ഹോമ-യജ്ഞങ്ങൾ
-          </button>
-
-          <button className="p-5 bg-[#FC931E] text-white rounded-4xl text-lg font-bold">
-            ഉത്സവ ബലി
-          </button>
-          <button className="p-5 bg-[#FC931E] text-white rounded-4xl text-lg font-bold">
-            ക്ഷേത്ര പ്രദക്ഷിണം
-          </button>
-          <button className="p-5 bg-[#FC931E] text-white rounded-4xl text-lg font-bold">
-            ഹോമ-യജ്ഞങ്ങൾ
-          </button>
-
-          <button className="p-5 bg-[#FC931E] text-white rounded-4xl text-lg font-bold">
-            ഉത്സവ ബലി
-          </button>
-          <button className="p-5 bg-[#FC931E] text-white rounded-4xl text-lg font-bold">
-            ക്ഷേത്ര പ്രദക്ഷിണം
-          </button>
-          <button className="p-5 bg-[#FC931E] text-white rounded-4xl text-lg font-bold">
-            ഹോമ-യജ്ഞങ്ങൾ
-          </button>
-
-          <button className="p-5 bg-[#FC931E] text-white rounded-4xl text-lg font-bold">
-            ഉത്സവ ബലി
-          </button>
-          <button className="p-5 bg-[#FC931E] text-white rounded-4xl text-lg font-bold">
-            ക്ഷേത്ര പ്രദക്ഷിണം
-          </button>
-          <button className="p-5 bg-[#FC931E] text-white rounded-4xl text-lg font-bold">
-            ഹോമ-യജ്ഞങ്ങൾ
-          </button> */}
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 
 function ParticularDonation() {
-    let formText = "ഒരു  തുക തിരഞ്ഞെടുക്കുക"
+  let formText = "ഒരു  തുക തിരഞ്ഞെടുക്കുക";
   return (
     <div>
       <Header />
@@ -24,7 +24,7 @@ function ParticularDonation() {
           ജ്യോതിഷം ശക്തമായ മാർഗ്ഗനിർദ്ദേശങ്ങൾ നൽകുന്നു.
         </p>
       </div>
-      <DonationForm text={formText}/>
+      <DonationForm text={formText} />
       <Footer />
     </div>
   );

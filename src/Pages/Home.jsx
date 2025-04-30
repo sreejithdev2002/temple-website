@@ -13,15 +13,15 @@ function Home() {
   return (
     <div>
       <Header />
-      <Home1/>
-      <Home2/>
+      <Home1 />
+      <Home2 />
       {/* <Home3/> */}
-      <HomeCarousel/>
-      <Home4/>
-      <Home5/>
-      <Home6/>
-      <Home7/>
-      <Footer/>
+      <HomeCarousel />
+      <Home4 />
+      <Home5 />
+      <Home6 />
+      <Home7 />
+      <Footer />
     </div>
   );
 }

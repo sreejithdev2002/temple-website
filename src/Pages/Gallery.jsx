@@ -1,26 +1,43 @@
+import { useEffect, useState } from "react";
 import Footer from "../Components/Footer";
 import GalleryCard from "../Components/Gallery Components/GalleryCard";
 import Header from "../Components/Header";
+import axiosInstance from "../axios/axiosInstance";
 
 function Gallery() {
+  const [gallery, setGallery] = useState([]);
+
+  const fetchGallery = async () => {
+    try {
+      const response = await axiosInstance.post("/gallery/showgallery");
+      if (response.status === 200) {
+        setGallery(response.data.gallery);
+        console.log(response.data.gallery, " : Gallery Datas");
+      }
+    } catch (error) {
+      console.error("Error fetching Gallery : ", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchGallery();
+  }, []);
+
   return (
     <div>
       <Header />
       <div className="flex flex-col items-center m-10 gap-y-2">
-        <h2 className="sm:text-2xl md:text-3xl lg:text-5xl font-bold">GALLERY</h2>
+        <h2 className="sm:text-2xl md:text-3xl lg:text-5xl font-bold">
+          GALLERY
+        </h2>
         <p className="text-xs lg:text-sm text-gray-600">
           View all our existing photos of the temple and all its events{" "}
         </p>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-y-10 my-10 gap-x-2 mx-2 md:mx-5 md:gap-x-5">
-        <GalleryCard />
-        <GalleryCard />
-        <GalleryCard />
-        <GalleryCard />
-        <GalleryCard />
-        <GalleryCard />
-        <GalleryCard />
-        <GalleryCard />
+        {gallery.map((data, index) => (
+          <GalleryCard key={index} data={data} />
+        ))}
       </div>
       <Footer />
     </div>
